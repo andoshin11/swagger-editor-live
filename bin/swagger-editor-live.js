@@ -12,7 +12,7 @@ program
     .option('-h, --host <Hostname|Ip>', 'Host to be used. Default is 127.0.0.1')
     .option('-f, --folder <folder>', 'folder to be used for a multifile swagger setup')
     .action(function(swaggerFilePath) {
-        swaggerFilePathValue = swaggerFilePath;
+        swaggerFilePathValue = process.cwd() + '/' + swaggerFilePath;
     });
 
 program.parse(process.argv);
