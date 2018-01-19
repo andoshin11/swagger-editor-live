@@ -43,9 +43,7 @@ function edit(swaggerFile, port, hostname,folder) {
   if (typeof folder != 'undefined') {
     app.use(express.static(folder));
   }
-  app.listen(port,hostname, function() {
-    open('http://' + hostname + ':' + port);
-  });
+  app.listen(port,hostname);
 }
 
 module.exports = {
